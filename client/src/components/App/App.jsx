@@ -33,7 +33,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>{!test ? "Loading..." : test}</p>
+        <ul>
+          {test.data?.map((item) => {
+            return (<li key={item.id}></li>)
+          })}
+        </ul>
       </header>
     </div>
   );
