@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 
 function App() {
-  const [test, setTest] = React.useState([]);
+  const [test, setTest] = useState([]);
 
   // React.useEffect(() => {
   //   fetch("/api")
@@ -22,8 +22,8 @@ function App() {
       url: "/api/test",
     })
       .then((response) => {
-        console.log('response:', response);
-        setTest(response.data[0].testData);
+        console.log('response.data:', response.data);
+        setTest(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -34,8 +34,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <ul>
-          {test.data?.map((item) => {
-            return (<li key={item.id}></li>)
+          {test.map((item) => {
+            return (<li key={item.id}>{`${item.testData}`}</li>)
           })}
         </ul>
       </header>
