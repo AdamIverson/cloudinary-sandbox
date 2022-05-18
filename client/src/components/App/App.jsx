@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 function App() {
   const [test, setTest] = useState([]);
@@ -32,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <header className="App-header">
         <ul>
           {test.map((item) => {
@@ -39,6 +42,7 @@ function App() {
           })}
         </ul>
       </header>
+      <Footer/>
     </div>
   );
 }
