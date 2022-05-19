@@ -6,12 +6,6 @@ import Nav from "../Nav/Nav";
 function App() {
   const [test, setTest] = useState([]);
 
-  // React.useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => setTest(data.message));
-  // }, []);
-
   useEffect(() => {
     callAPI();
   }, []);
