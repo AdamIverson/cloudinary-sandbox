@@ -1,2 +1,2 @@
-./src/node_modules
-../src/node_modules
+node_modules
+/Users/adamiverson/Coding/photo_website/node-react-site/node_modules
