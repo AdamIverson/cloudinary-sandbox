@@ -13,13 +13,13 @@ function App() {
   }, []);
 
   function callAPI() {
-    console.log('in callAPI()');
+    console.log("in callAPI()");
     axios({
       method: "GET",
       url: "/api/test",
     })
       .then((response) => {
-        console.log('response.data:', response.data);
+        console.log("response.data:", response.data);
         setTest(response.data);
       })
       .catch((err) => {
@@ -31,7 +31,9 @@ function App() {
     <div className="App">
       <Header />
       <Sidenav />
-      <Image />
+      <div className="imageComponent">
+        <Image />
+      </div>
     </div>
   );
 }

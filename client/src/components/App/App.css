@@ -10,10 +10,15 @@ body {
   justify-items: center;
 }
 
+a {
+  padding: .5rem;
+}
+
 h1 {
-  text-align: center;
+  text-align: left;
   margin: 1%;
   font-weight: 100;
+  z-index: 1;
 }
 
 img {
@@ -31,25 +36,40 @@ img:hover {
 
 .App {
   margin: 1%;
+  height: 100%;
 }
 
-.image {
+.container {
+  width: 100%;
   display: flex;
+  background-color: rgba(255, 0, 0, 0.646);
+  justify-content: right;
 }
 
 .sidenav {
   height: 100%;
-  width: 25%;
+  width: 15%;
   position: fixed;
-  z-index: 1;
-  top: 0;
+  z-index: 12;
+  top: 10;
   left: 0;
   background-color: white;
   transition: 0.5s ease;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 1%;
   display: flex;
   flex-direction: column;
   align-items: left;
   margin-left: 3%;
+}
+
+/* .imageList {
+  background-color: red;
+} */
+
+.imageComponent {
+  /* background-color: red; */
+  display: block;
+  margin-left: 15%;
+  margin-right: 5%;
 }
