@@ -2,12 +2,53 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
+  font-family: "Special Elite", cursive;
+  background-color: white;
+  justify-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 1%;
+  font-weight: 100;
+}
+
+img {
+  box-shadow: 23px 23px 3px 3px rgba(0, 0, 0, 0.605),
+    -13px -13px 3px 3px rgba(128, 128, 128, 0.622);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.605),
+    -3px -3px 3px 3px rgba(128, 128, 128, 0.622);
 }
 
 .App {
-  text-align: center;
-  min-height: 100%;
-  margin-bottom: 142px;
+  margin: 1%;
+}
+
+.image {
+  display: flex;
+}
+
+.sidenav {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.5s ease;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

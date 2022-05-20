@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
+import Image from "../Image/Image";
+import Sidenav from "../Sidenav/Sidenav";
 
 function App() {
   const [test, setTest] = useState([]);
@@ -27,7 +30,10 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Nav />
+      <Sidenav />
+      <Image />
     </div>
   );
 }
