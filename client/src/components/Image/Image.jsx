@@ -25,12 +25,12 @@ const [images, setImages] = useState([]);
 
   return (
     <div className="container">
-      <img src="/../../../images/prime-hatclub-2022-1_orig.jpeg" alt="hatclub"/>
-      {/* <ul className="imageList">
+      {/* <img src="/../../../images/prime-hatclub-2022-1_orig.jpeg" alt="hatclub"/> */}
+      <ul className="imageList">
         {images.map((image) => {
-          return(<li key={image.id}>{`${image.testData}`}</li>)
+          return(<li key={image.id}><img src={`/../../../images/${image.url}`}/></li>)
         })}
-      </ul> */}
+      </ul>
     </div>
   );
 }
