@@ -3,8 +3,10 @@ const express = require("express");
 const app = express();
 
 const testRouter = require('./routes/test.router');
+const uploadRouter = require('./routes/upload.router');
 
 app.use('/api/test', testRouter);
+app.use('/api/upload', uploadRouter);
 
 // app.get("/api", (req, res) => {
 //   res.json({ message: "Hello from server!" });
