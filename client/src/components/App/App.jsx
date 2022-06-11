@@ -4,6 +4,8 @@ import axios from "axios";
 import Header from "../Header/Header";
 import Image from "../Image/Image";
 import Sidenav from "../Sidenav/Sidenav";
+import Test from "../Test/Test";
+import 'dotenv/config';
 
 function App() {
   const [test, setTest] = useState([]);
@@ -29,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Test />      <Header />
       <Sidenav />
       <div className="imageComponent">
         <Image />
