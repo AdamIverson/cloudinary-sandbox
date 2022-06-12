@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import Image from "../Image/Image";
 import Sidenav from "../Sidenav/Sidenav";
 import Test from "../Test/Test";
-import 'dotenv/config';
+// import 'dotenv/config';
 
 function App() {
   const [test, setTest] = useState([]);
