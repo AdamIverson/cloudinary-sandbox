@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function Test() {
   const [fileInputState, setFileInputState] = useState("");
-  const [selectedFile, setSelectedFile] = useState("");
+  // const [selectedFile, setSelectedFile] = useState("");
   const [previewSource, setPreviewSource] = useState("");
 
   const handleFileInputChange = (e) => {
@@ -28,7 +28,8 @@ function Test() {
       }
       )
      } catch (error) {
-      console.error(error)
+      console.error(error);
+
      }
   }
 
@@ -47,7 +48,7 @@ function Test() {
           onChange={handleFileInputChange}
           value={fileInputState}
         />
-        <button type="submit"></button>
+        <button type="submit">BUTTON</button>
       </form>
       {previewSource && (
         <img 
