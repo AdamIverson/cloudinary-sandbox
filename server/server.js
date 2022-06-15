@@ -1,7 +1,6 @@
 const express = require("express");
 const { cloudinary } = require("./utils/cloudinary");
-const dotenv = require("dotenv").config();
-
+require("dotenv").config();
 const app = express();
 
 app.use(express.json({ limit: "50mb" }));
@@ -11,16 +10,14 @@ app.post("/api/upload", async (req, res) => {
   try {
     const fileStr = req.body.data;
     const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-      upload_preset: "testFolder1000",
-      api_key: `${process.env.CLOUDINARY_API_KEY}`,
-      cloud_name: `${process.env.CLOUDINARY_NAME}`,
-      api_secret: `${process.env.CLOUDINARY_SECRET}`,
+      upload_preset: 'testFolder1000'
     }); 
     // console.log('fileStr:', fileStr);
     console.log("uploadedResponse:", uploadedResponse);
-    res.json({ msg: "YAy " });
+    res.json({ msg: "YAY" });
   } catch (error) {
     console.error(error);
+    res.status(500).json({err: 'bad news'})
   }
 });
 

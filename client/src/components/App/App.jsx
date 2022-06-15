@@ -5,9 +5,9 @@ import Header from "../Header/Header";
 import Image from "../Image/Image";
 import Sidenav from "../Sidenav/Sidenav";
 import Test from "../Test/Test";
-// import 'dotenv/config';
 
 function App() {
+  console.log(process.env);
   const [test, setTest] = useState([]);
 
   useEffect(() => {
