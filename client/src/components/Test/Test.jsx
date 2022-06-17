@@ -19,7 +19,6 @@ function Test() {
   }
 
   const uploadImage = async (jazz) => {
-     console.log('JAZZ: ', jazz);
      try {
       await fetch('/api/upload', {
         method: 'POST',
