@@ -1,12 +1,15 @@
 const express = require("express");
 const { cloudinary } = require("./utils/cloudinary");
-require("dotenv").config();
+require("dotenv").config({
+  path: './server/.env'
+});
 const app = express();
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.post("/api/upload", async (req, res) => {
+  console.log('process.env.CLOUDINARY_NAME: ', process.env.CLOUDINARY_NAME);
   try {
     const fileStr = req.body.data;
     const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
